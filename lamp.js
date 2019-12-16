@@ -7,12 +7,12 @@ board.on("ready", function(){
   const led = new five.Led(12);
 
   socket.on('all tools', function(data){
-    for (var i = 0; i < data.length; i++) {
-      if(data[i].lamp){
+    // for (var i = 0; i < data.length; i++) {
+      if(data.lamp){
         led.on()
       }else {
         led.off()
       }
-    }
+    // }
   });
 });
